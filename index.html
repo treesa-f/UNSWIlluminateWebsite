@@ -11,20 +11,22 @@
     </head>  
    
     <body>
-        <nav id="navbar">
-           <div id="navAbout">About</div>
-           <div>Our Team</div>
-           <div>Projects</div>
-           <div>Partnerships</div>
-           <div id="contact">Contact Us</div>
-        </nav>
-        <div id="navback"></div>
+        <div data-aos-once="true" data-aos="fade-down">
+            <nav id="navbar">
+                    <div id="navAbout">About</div>
+                    <div>Our Team</div>
+                    <div>Projects</div>
+                    <div>Partnerships</div>
+                    <div id="contact">Contact Us</div>
+            </nav>
+        </div>
+        <div id="navback" style="top: -100px"></div>
         <div>
-            <img id="logo" src="logo.png">
+            <img id="logo" src="logo.png" data-aos-once="true" data-aos="fade-down">
         </div> 
         <div class="parallax">
-                <div class="title" id="slogan" >Art <span style="font-family: 'Pacifico', cursive; font-weight: 300; color: #2FBBAA;">meets</span> Technology</div>
-                <i class="material-icons" id="scrollDown" >keyboard_arrow_down</i>
+                <div class="title" id="slogan" data-aos-once="true" data-aos="fade-right" data-aos-delay="1000">Art <span style="font-family: 'Pacifico', cursive; font-weight: 300; color: #2FBBAA;">meets</span> Technology</div>
+                <i class="material-icons" id="scrollDown">keyboard_arrow_down</i>
         </div>
         <div id="about">
             <div class="about">
@@ -88,7 +90,7 @@
                 easing: 'ease-in-out',
                 duration: 900,
                 //once: true,
-                delay: 200,
+                delay: 50,
             });
             const logo = document.getElementById("logo");
             const slogan = document.getElementById("slogan");

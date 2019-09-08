@@ -134,11 +134,13 @@
                         navBack.style.top = "-100px";
                     }
                     
-                    if (logo.getBoundingClientRect().bottom > slogan.getBoundingClientRect().top){
+                    if (logo.getBoundingClientRect().bottom + 50 > slogan.getBoundingClientRect().top){
                         slogan.style.opacity = "0";
+                        slogan.style.transitionDelay = "0s";
                         scrollDown.style.opacity = "0";
                     } else {
                         slogan.style.opacity = "1";
+                        slogan.style.transitionDelay = "0s";
                         scrollDown.style.opacity = "1";
                     }
 

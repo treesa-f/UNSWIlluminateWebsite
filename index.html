@@ -22,7 +22,7 @@
         </div>
         <div id="navback" style="top: -100px"></div>
         <div>
-            <img id="logo" src="logo.png" data-aos-once="true" data-aos="fade-down">
+            <img id="logo" src="logo.png" data-aos-once="true" data-aos="fade-down" data-aos-id="nav">
         </div> 
         <div class="parallax">
                 <div class="title" id="slogan" data-aos-once="true" data-aos="fade-right" data-aos-delay="1000">Art <span style="font-family: 'Pacifico', cursive; font-weight: 300; color: #2FBBAA;">meets</span> Technology</div>
@@ -104,6 +104,8 @@
                     left: 0,
                     behavior: 'smooth'
                 });
+                logo.src = "dark.png";
+                navBack.style.top = "0px";
             })
 
 
@@ -113,7 +115,34 @@
                     left: 0,
                     behavior: 'smooth'
                 });
+                logo.src = "dark.png";
+                navBack.style.top = "0px";
             });
+
+            document.addEventListener('aos:in:nav', ({ detail }) => {
+                setTimeout(()=>{
+                    if (logo.getBoundingClientRect().bottom + 50 > slogan.getBoundingClientRect().top){
+                        slogan.style.opacity = "0";
+                        slogan.style.transitionDelay = "0s";
+                        scrollDown.style.opacity = "0";
+                    } else {
+                        slogan.style.opacity = "1";
+                        slogan.style.transitionDelay = "0s";
+                        scrollDown.style.opacity = "1";
+                    }
+
+                    if (logo.getBoundingClientRect().bottom > about.getBoundingClientRect().top){
+                        logo.src = "dark.png";
+                    } else {
+                        logo.src = "logo.png";
+                    }
+
+                    if (logo.getBoundingClientRect().bottom > contact.getBoundingClientRect().top){
+                        logo.src = "logo.png";
+                    }
+                }, 900);
+            });
+            
 
             $(function() {
                 $(window).bind('mousewheel', function(event, delta) {

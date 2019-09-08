@@ -1,0 +1,158 @@
+<html>  
+    <head>  
+        <link rel = "stylesheet" href = "index.css">  
+        <link rel = "stylesheet" href = "form.css">  
+        <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:600,800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    </head>  
+   
+    <body>
+        <nav id="navbar">
+           <div id="navAbout">About</div>
+           <div>Our Team</div>
+           <div>Projects</div>
+           <div>Partnerships</div>
+           <div id="contact">Contact Us</div>
+        </nav>
+        <div id="navback"></div>
+        <div>
+            <img id="logo" src="logo.png">
+        </div> 
+        <div class="parallax">
+                <div class="title" id="slogan" >Art <span style="font-family: 'Pacifico', cursive; font-weight: 300; color: #2FBBAA;">meets</span> Technology</div>
+                <i class="material-icons" id="scrollDown" >keyboard_arrow_down</i>
+        </div>
+        <div id="about">
+            <div class="about">
+                <h1 data-aos="fade">About Us</h1>
+                <div class="row">
+                    <div class="left"><img src="Synergy.jpg" class="images" data-aos="fade-up"></div>
+                    <div class="right" data-aos="fade-down"><p>UNSW Illuminate is a student project that aims to empower students to apply hands-on skills on large scale professional and multidisciplinary 
+                        projects. We seek to foster deep interactions between designers and engineers, allowing students to realise their creative visions while gaining 
+                        practical design and manufacturing experience. This project combines the creativity of art and the innovation of engineering to demonstrate 
+                        the magic of art meeting technology through light.
+                    </p></div>
+                </div>
+                <div class="row">
+                    <div class="left leftText" data-aos="fade-down">
+                        <h2>Our Legacy</h2>
+                        <p>UNSW Illuminate began in 2015 and was originally a project under UNSW’s CREATE student society. Following 4 successful installations with VIVID Sydney, and 
+                            the expansion of the team, the project has now grown to become an independent student project, rebranded under UNSW’s new ChallENG program. UNSW Illuminate, 
+                            however, still remains in close collaboration with CREATE. 
+                        </p>
+                    </div>
+                    <div class="right rightText">
+                        <img src="team.jpg" class="images" data-aos="fade-up">
+                    </div>
+                </div>
+            </div>        
+        </div>
+            
+        <div id="contactUs">
+            <div class="contact">
+                <h1>Contact Us</h1>
+                <h3>Stay updated with our events and news!</h3>
+                <div id="mc_embed_signup">
+                    <form action="https://facebook.us19.list-manage.com/subscribe/post?u=7a2e079758f92ecb821c1438d&amp;id=d49093e2b1" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                        <div id="mc_embed_signup_scroll">
+                            <div class="mc-field-group">
+                                <input type="text" value="" name="EMAIL" required class="email" id="mce-EMAIL">
+                                <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span></label>
+                            </div>
+                            <div class="mc-field-group">
+                                <input type="text" value="" name="FNAME" required id="mce-FNAME">
+                                <label for="mce-FNAME">First Name  <span class="asterisk">*</span></label>
+                            </div>
+                            <div class="mc-field-group">
+                                <input type="text" value="" name="LNAME" required id="mce-LNAME">
+                                <label for="mce-LNAME">Last Name  <span class="asterisk">*</span></label>
+                            </div>
+                            <div id="mce-responses" class="clear">
+                                <div class="response" id="mce-error-response" style="display:none"></div>
+                                <div class="response" id="mce-success-response" style="display:none"></div>
+                            </div> 
+                            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_7a2e079758f92ecb821c1438d_d49093e2b1" tabindex="-1" value=""></div>
+                            <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>    
+        </div>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                easing: 'ease-in-out',
+                duration: 900,
+                //once: true,
+                delay: 200,
+            });
+            const logo = document.getElementById("logo");
+            const slogan = document.getElementById("slogan");
+            const scrollDown = document.getElementById("scrollDown");
+            const navBack = document.getElementById("navback");
+            const about = document.getElementById("about");
+            const contact = document.getElementById("contactUs");
+
+            document.getElementById("navAbout").addEventListener("click", () => {
+                window.scroll({
+                    top: window.pageYOffset + about.getBoundingClientRect().top,
+                    left: 0,
+                    behavior: 'smooth'
+                });
+            })
+
+            document.getElementById("contact").addEventListener("click", () => {
+                window.scroll({
+                    top: window.pageYOffset + contact.getBoundingClientRect().top,
+                    left: 0,
+                    behavior: 'smooth'
+                });
+            })
+
+            scrollDown.addEventListener("click", () => {
+                window.scroll({
+                    top: window.pageYOffset + about.getBoundingClientRect().top,
+                    left: 0,
+                    behavior: 'smooth'
+                });
+            });
+
+            $(function() {
+                $(window).bind('mousewheel', function(event, delta) {
+                    //console.log(prevScrollpos, event.offsetY);
+                    if (event.originalEvent.deltaY < 0) {
+                        document.getElementById("navbar").style.top = "27px";
+                        navBack.style.top = "0px";
+                    } else {
+                        document.getElementById("navbar").style.top = "-50px";
+                        navBack.style.top = "-100px";
+                    }
+                    
+                    if (logo.getBoundingClientRect().bottom > slogan.getBoundingClientRect().top){
+                        slogan.style.opacity = "0";
+                        scrollDown.style.opacity = "0";
+                    } else {
+                        slogan.style.opacity = "1";
+                        scrollDown.style.opacity = "1";
+                    }
+
+                    if (logo.getBoundingClientRect().bottom > about.getBoundingClientRect().top){
+                        logo.src = "dark.png";
+                    } else {
+                        logo.src = "logo.png";
+                    }
+
+                    if (logo.getBoundingClientRect().bottom > contact.getBoundingClientRect().top){
+                        logo.src = "logo.png";
+                    }
+                });
+            });
+            
+        </script>
+   </body>
+   
+</html> 

@@ -1,0 +1,198 @@
+body{
+    font: 100% / 1.5 Arial; 
+}
+
+* {
+    margin:0;
+    padding:0;
+}
+
+.parallax {
+    /* The image used */
+    background-image: url("celestialPancake.jpg");
+
+    /* Set a specific height */
+    min-height: 150vh; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+   /* centre the content in the parallax layers */
+.title {
+    position: absolute;
+    left: 10%;
+    top: 70%;
+    font-family: 'Montserrat', sans-serif;
+    color: #efefef;
+    font-size: 60px;
+    font-weight: 600;
+    transition: all 0.2s ease-in 0s;
+    opacity: 1;
+}
+
+#logo{
+    height: 55px;
+    position: fixed;
+    top: 15px;
+    left: 40px;
+    z-index: 100;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    position: fixed;
+    top: 27px;
+    right: 20px;
+    justify-content: space-evenly;
+    z-index: 4;
+    color: #efefef;
+    font-family: 'Nunito Sans', sans-serif;
+    transition: all 0.5s ease-in-out 0s;
+    z-index: 100;
+}
+
+nav div{
+    transition: all 0.3s ease-in-out 0s; 
+    cursor: pointer;
+    padding: 0 20 0 20;
+}
+
+nav div:hover{
+    border: #efefef 3px solid;
+    cursor: pointer;
+    padding: 10 20 10 20;
+    border-radius: 30px;
+    line-height: 18px;
+    margin: -10px;
+}
+
+nav #contact {
+    background-color: #2FBBAA;
+    border-radius: 30px;
+    padding: 10 20 10 20;
+    margin: -10px;
+    transition: all 0.3s ease-in-out 0s; 
+    cursor: pointer;
+}
+
+nav #contact:hover {
+    background-color: #efefef;
+    color: #2FBBAA;
+    cursor: pointer;
+}
+
+#navBack{
+    width: 100%;
+    background-color: rgba(33, 33, 33, 0.4);
+    top: 0px;
+    left: 0px;
+    height: 80px;
+    z-index: 90;
+    position: fixed;
+    transition: all 0.5s ease-in-out 0s;
+}
+
+#scrollDown{
+    position: absolute;
+    left: 49%;
+    bottom: 8%;
+    color: white;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.about{
+    background-color: white;
+}
+
+.about{
+    padding: 100 60 60 60;
+    
+}
+
+#about{
+    min-height: 200vh;
+}
+
+#about .row{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 100px;
+}
+
+#about p{
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+h1{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-weight: 800;
+    padding-bottom: 30px;
+    font-size: 70px;
+}
+
+h3{
+    font-family: 'Nunito Sans', sans-serif;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 300;
+    color: #efefef;
+    padding-bottom: 30px;
+}
+
+#about .row div{
+    flex: 1 1 0;
+    flex-basis: 100%;
+}
+
+#about .right{
+    padding: 150 7% 0 1%;
+    border-left: #222222 3px solid;
+}
+
+#about .left{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 0 0.5% 0 7%;
+}
+
+#about .images{
+    height: 300px;
+}
+
+#about .leftText{
+    flex-direction: column;
+    justify-content: start;
+    text-align: right;
+    padding-right: 1%;
+    border-right: #222222 3px solid;
+}
+
+#about .rightText{
+    border: none;
+}
+
+
+#contactUs .contact{
+    background-color: #363636;
+}
+
+.contact{
+    padding: 60 60 60 60;
+    
+}
+
+.contact h1{
+    color: #efefef;
+    padding-bottom: 0px;
+}

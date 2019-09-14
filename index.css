@@ -22,7 +22,7 @@ html {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: fill;
 }
 
    /* centre the content in the parallax layers */
@@ -207,4 +207,21 @@ h3{
 .contact h1{
     color: #efefef;
     padding-bottom: 0px;
+}
+
+#contact a{
+    text-decoration: none;
+    color: #efefef;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+#contact:hover{
+    background-color: #efefef;
+    color: #2FBBAA;
+    cursor: pointer;
+}
+
+#contact:hover a{
+    color: #2FBBAA;
+    cursor: pointer;
 }

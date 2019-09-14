@@ -1,0 +1,33 @@
+#enquiries .mc-field-group input,
+#enquiries .mc-field-group textarea{
+    border: #333 2px solid;
+}
+
+#enquiries .mc-field-group input:focus,
+#enquiries .mc-field-group textarea:focus{
+    border: #2fbbaa 2px solid;
+}
+
+#body{
+    background-color: white;
+    width: 100%;
+    padding-top: 60px;
+}
+.parallax{
+    padding: 150px 50px 0px 50px;
+    height: 100%;
+    min-height: 100%;
+}
+
+#message{
+    height: 80px;
+    padding: 15px;
+}
+
+#enquiries{
+    padding: 0 5% 30px 5%;
+}
+
+#body h1{
+    font-size: 50px;
+}

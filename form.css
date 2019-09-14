@@ -28,7 +28,8 @@
     font-family: 'Nunito Sans', sans-serif;
 }
 
-.mc-field-group input{
+.mc-field-group input,
+.mc-field-group textarea{
     width: 100%;
     margin: 10px;
     height: 50px;
@@ -43,13 +44,16 @@
     border-radius: 4px;
 }
 
-.mc-field-group input:focus{
+.mc-field-group input:focus,
+.mc-field-group textarea:focus{
     background-color: white;
     border: #2FBBAA 2px solid;
 }
 
 .mc-field-group input:focus ~ label,
-.mc-field-group input:valid ~ label{
+.mc-field-group input:valid ~ label,
+.mc-field-group textarea:valid ~ label,
+.mc-field-group textarea:focus ~ label{
     top: 5px !important;
     left: 10px !important;
     font-size: 9px !important;
